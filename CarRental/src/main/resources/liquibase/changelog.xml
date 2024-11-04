@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd"
+        logicalFilePath="./liquibase/sql">
+
+    <changeSet id="homework-2-role" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Role"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/01.Role.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-user" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="users"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/02.Users.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-userroles" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="UserRoles"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/03.UserRoles.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-location" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Location"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/04.Location.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-carmodel" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="CarModel"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/05.CarModel.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+
+    <changeSet id="homework-2-car" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Car"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="sql/06.Car.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-rental" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Rental"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="sql/07.Rental.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-feedback" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Feedback"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="sql/08.Feedback.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-transaction" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Transaction"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="sql/09.Transaction.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-accounts" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Account"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="sql/10.Account.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-application-accounts" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="application_account"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="sql/11.ApplicationAccount.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-add_indexes_car" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Car"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/add_indexes_car.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-add_indexes_feedback" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Feedback"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/add_indexes_feedback.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-add_indexes_rental" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Rental"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/add_indexes_rental.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-add_trigger_rental" author="Artsiom Vyshynski">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Rental"/>
+            </not>
+        </preConditions>
+        <sqlFile encoding="utf8" path="./sql/add_trigger_rental.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+</databaseChangeLog> 
